@@ -9,10 +9,10 @@ interface SearchResultsProps {
         formatedPrice: string
     }>
     totalPrice: number;
-    onAddToWhishlist: (id: number) => void
+    onAddToWishlist: (id: number) => void
 }
 
-export function SearchResults({results, onAddToWhishlist, totalPrice}: SearchResultsProps) {
+export function SearchResults({results, onAddToWishlist, totalPrice}: SearchResultsProps) {
     return (
         <div>
             <h2>{totalPrice}</h2>
@@ -22,7 +22,7 @@ export function SearchResults({results, onAddToWhishlist, totalPrice}: SearchRes
                         <ProductItem 
                             key={product.id} 
                             product={product} 
-                            onAddToWhishlist={onAddToWhishlist}
+                            onAddToWishlist={onAddToWishlist}
                         />
                     )
                 })
